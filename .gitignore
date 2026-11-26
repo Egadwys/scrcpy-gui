@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.DS_Store
+*.log
+apps/desktop/src-tauri/gen/
+# scrcpy is downloaded by scripts/fetch-scrcpy.mjs
+apps/desktop/src-tauri/resources/scrcpy/*
+!apps/desktop/src-tauri/resources/scrcpy/README.txt
