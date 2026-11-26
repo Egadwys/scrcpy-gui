@@ -3,6 +3,13 @@ name: Release
 on:
   push:
     tags: ['v*']
+  # Adds the "Run workflow" button in the Actions tab
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to create, e.g. v0.1.0'
+        required: true
+        default: 'v0.1.0'
 
 jobs:
   release:
@@ -18,7 +25,7 @@ jobs:
             args: ''
           - platform: macos-latest
             args: '--target aarch64-apple-darwin'
-          - platform: macos-13
+          - platform: macos-15-intel
             args: '--target x86_64-apple-darwin'
     runs-on: ${{ matrix.platform }}
     steps:
@@ -47,7 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           projectPath: apps/desktop
-          tagName: ${{ github.ref_name }}
-          releaseName: 'Scrcpy GUI ${{ github.ref_name }}'
+          tagName: ${{ inputs.tag || github.ref_name }}
+          releaseName: 'Scrcpy GUI ${{ inputs.tag || github.ref_name }}'
           releaseDraft: true
           args: ${{ matrix.args }}
