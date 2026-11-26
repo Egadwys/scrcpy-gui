@@ -149,7 +149,7 @@
         </select>
       {/if}
 
-      <PhoneStage tone={view.tone} wifi={!!device?.isWifi} />
+      <PhoneStage tone={view.tone} wifi={!!device?.isWifi} connected={!!device} />
 
       <div class="text">
         <div class="kicker">{view.kicker}</div>
