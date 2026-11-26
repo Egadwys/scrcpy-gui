@@ -1,0 +1,8 @@
+Scrcpy GUI
+Copyright 2026 Scrcpy GUI contributors
+
+This product is a graphical front end for scrcpy (https://github.com/Genymobile/scrcpy,
+Copyright Genymobile and Romain Vimont, Apache License 2.0). Installers include an unmodified
+scrcpy release, and the app can download newer unmodified releases from the official repository.
+See THIRD_PARTY.md. Its structure is modelled on gnirehtet-gui
+(https://github.com/sawongam/gnirehtet-gui, Apache License 2.0).
