@@ -1,5 +1,5 @@
 # SCRCPY GUI
-[![License](https://img.shields.io/github/license/sawongam/gnirehtet-gui)](LICENSE)
+[![License](https://img.shields.io/github/license/egadwys/scrcpy-gui)](LICENSE)
 
 Mirror, control, record and screenshot your Android phone with [scrcpy](https://github.com/Genymobile/scrcpy), without touching the terminal. Plug in the phone (or connect over Wi-Fi), click **Start mirroring**, done. Runs on Linux, Windows and macOS.
 This is an independent project, not affiliated with or endorsed by Genymobile. It drives the unmodified official `scrcpy` and `adb` binaries; the app adds the interface and the process management around them.
